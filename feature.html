@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience exceptional private dining with Savouré. Personalized menus, intimate dinners, special celebrations, and premium culinary experiences brought to your table.">
+    <title>Savouré | Extraordinary Dining, Intimately Yours</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --dark: #171914;
+            --dark-light: #23251f;
+            --cream: #f7f4ed;
+            --white: #ffffff;
+            --gold: #c5a46d;
+            --gold-dark: #a98850;
+            --text: #4c4c43;
+            --muted: #a7a69b;
+            --border: rgba(197, 164, 109, 0.25);
+            --heading-font: 'Playfair Display', serif;
+            --body-font: 'DM Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            font-family: var(--body-font);
+            color: var(--dark);
+            background: var(--cream);
+            line-height: 1.7;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: min(1180px, 90%);
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            color: var(--gold-dark);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-family: var(--heading-font);
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 22px;
+        }
+
+        .section-description {
+            color: var(--text);
+            max-width: 620px;
+            font-size: 15px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .center .section-description {
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 27px;
+            border: 1px solid var(--gold);
+            background: var(--gold);
+            color: var(--dark);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.7px;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--gold-dark);
+            border-color: var(--gold-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-outline:hover {
+            color: var(--dark);
+            background: var(--white);
+            border-color: var(--white);
+        }
+
+        /* HEADER */
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(23, 25, 20, 0.97);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar {
+            min-height: 82px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .logo {
+            color: var(--white);
+            font-family: var(--heading-font);
+            font-size: 29px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+        }
+
+        .nav-links a {
+            color: #e3e0d8;
+            font-size: 12px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-booking {
+            white-space: nowrap;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 690px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(15, 17, 13, 0.93) 0%,
+                    rgba(15, 17, 13, 0.77) 43%,
+                    rgba(15, 17, 13, 0.2) 100%
+                ),
+                url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=85')
+                center/cover no-repeat;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            padding: 100px 0;
+        }
+
+        .hero .section-label {
+            color: var(--gold);
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-family: var(--heading-font);
+            font-size: clamp(3rem, 6vw, 5.6rem);
+            font-weight: 500;
+            line-height: 1.08;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 em {
+            color: var(--gold);
+            font-weight: 400;
+        }
+
+        .hero p {
+            color: #e1ded5;
+            max-width: 520px;
+            font-size: 15px;
+            margin-bottom: 34px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-note {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #d5d0c3;
+            font-size: 11px;
+            letter-spacing: 1px;
+            margin-top: 45px;
+        }
+
+        .hero-note span {
+            width: 35px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 90px;
+        }
+
+        .about-image-wrap {
+            position: relative;
+            padding: 0 25px 25px 0;
+        }
+
+        .about-image {
+            height: 550px;
+            object-position: center;
+        }
+
+        .about-image-wrap::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 65%;
+            height: 65%;
+            border: 1px solid var(--gold);
+            z-index: -1;
+        }
+
+        .about-content p {
+            color: var(--text);
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .signature {
+            color: var(--gold-dark);
+            font-family: var(--heading-font);
+            font-size: 30px;
+            font-style: italic;
+            margin: 25px 0;
+        }
+
+        /* SERVICES */
+
+        .services {
+            background: #eeebe3;
+        }
+
+        .services-header {
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--cream);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-card img {
+            height: 260px;
+            transition: filter 0.3s;
+        }
+
+        .service-content {
+            padding: 28px;
+        }
+
+        .service-number {
+            color: var(--gold-dark);
+            font-size: 11px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .service-content h3 {
+            font-family: var(--heading-font);
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .service-content p {
+            color: var(--text);
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .text-link {
+            color: var(--gold-dark);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .text-link span {
+            margin-left: 6px;
+            transition: margin 0.3s;
+        }
+
+        .text-link:hover span {
+            margin-left: 12px;
+        }
+
+        /* MENU */
+
+        .menu-header {
+            margin-bottom: 45px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .menu-card {
+            border: 1px solid #e5e0d5;
+            background: #fffdf8;
+        }
+
+        .menu-card img {
+            height: 270px;
+        }
+
+        .menu-info {
+            padding: 24px;
+        }
+
+        .menu-category {
+            display: block;
+            color: var(--gold-dark);
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .menu-info h3 {
+            font-family: var(--heading-font);
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .menu-info p {
+            color: var(--text);
+            font-size: 13px;
+        }
+
+        .menu-footer {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .menu-note {
+            font-size: 12px;
+            color: var(--text);
+            margin-top: 15px;
+        }
+
+        /* EXPERIENCE */
+
+        .experience {
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .experience .section-description {
+            color: #bcbdb3;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .step {
+            border-top: 1px solid var(--border);
+            padding-top: 25px;
+        }
+
+        .step-number {
+            color: var(--gold);
+            font-family: var(--heading-font);
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .step h3 {
+            font-family: var(--heading-font);
+            font-size: 21px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            color: #bcbdb3;
+            font-size: 13px;
+        }
+
+        /* GALLERY */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 230px;
+            gap: 15px;
+            margin-top: 45px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item:first-child {
+            grid-row: span 2;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.07);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            inset: auto 0 0;
+            padding: 35px 18px 18px;
+            color: white;
+            font-family: var(--heading-font);
+            font-size: 19px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        }
+
+        /* TESTIMONIALS */
+
+        .testimonials {
+            background: #eeebe3;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: var(--cream);
+            padding: 32px;
+            border: 1px solid #e3ded2;
+        }
+
+        .stars {
+            color: var(--gold-dark);
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card blockquote {
+            color: var(--text);
+            font-family: var(--heading-font);
+            font-size: 19px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .client-name {
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .client-event {
+            color: var(--gold-dark);
+            font-size: 11px;
+            margin-top: 4px;
+        }
+
+        /* BOOKING CTA */
+
+        .booking-cta {
+            padding: 100px 0;
+            text-align: center;
+            background:
+                linear-gradient(rgba(20, 22, 17, 0.87), rgba(20, 22, 17, 0.9)),
+                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85')
+                center/cover no-repeat;
+            color: var(--white);
+        }
+
+        .booking-cta .section-label {
+            color: var(--gold);
+        }
+
+        .booking-cta .section-title {
+            max-width: 750px;
+            margin: 0 auto 20px;
+        }
+
+        .booking-cta p {
+            color: #d0cec4;
+            max-width: 580px;
+            margin: 0 auto 30px;
+            font-size: 14px;
+        }
+
+        /* BOOKING FORM */
+
+        .booking-section {
+            background: var(--cream);
+        }
+
+        .booking-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .booking-copy p {
+            color: var(--text);
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .contact-detail {
+            margin-top: 25px;
+        }
+
+        .contact-detail h4 {
+            font-size: 12px;
+            color: var(--gold-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .contact-detail p {
+            margin-bottom: 0;
+        }
+
+        .booking-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            border: 1px solid #ddd7ca;
+            background: #fffdf8;
+            padding: 13px 14px;
+            outline: none;
+            color: var(--dark);
+            border-radius: 0;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--gold-dark);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-message {
+            display: none;
+            grid-column: 1 / -1;
+            padding: 15px;
+            background: #e5eddf;
+            color: #31512a;
+            font-size: 13px;
+        }
+
+        /* FAQ */
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 80px;
+        }
+
+        .faq-list {
+            border-top: 1px solid #ded8ca;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ded8ca;
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 23px 0;
+            background: none;
+            border: none;
+            text-align: left;
+            color: var(--dark);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .faq-icon {
+            color: var(--gold-dark);
+            font-size: 22px;
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 25px 22px 0;
+            color: var(--text);
+            font-size: 13px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* FOOTER */
+
+        .footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 75px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 60px;
+            padding-bottom: 50px;
+        }
+
+        .footer-brand p {
+            color: #bcbdb3;
+            font-size: 13px;
+            max-width: 330px;
+            margin-top: 18px;
+        }
+
+        .footer-column h3 {
+            font-family: var(--heading-font);
+            font-weight: 500;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a,
+        .footer-column p {
+            color: #bcbdb3;
+            font-size: 12px;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--gold);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: var(--gold);
+            font-size: 12px;
+        }
+
+        .footer-bottom {
+            padding-top: 22px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p,
+        .footer-bottom a {
+            color: #a7a69b;
+            font-size: 11px;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* SCROLL ANIMATION */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 1050px) {
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .about-grid {
+                gap: 45px;
+            }
+
+            .booking-grid,
+            .faq-grid {
+                gap: 45px;
+            }
+
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .section {
+                padding: 75px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .navbar {
+                min-height: 75px;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: var(--dark);
+                padding: 15px 5% 25px;
+                border-top: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 12px 0;
+                font-size: 13px;
+            }
+
+            .nav-booking {
+                display: none;
+            }
+
+            .hero {
+                min-height: 620px;
+                background-position: 60% center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .about-image-wrap {
+                max-width: 550px;
+            }
+
+            .about-image {
+                height: 450px;
+            }
+
+            .services-grid,
+            .menu-grid,
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .service-card:last-child,
+            .menu-card:last-child {
+                grid-column: 1 / -1;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 220px;
+            }
+
+            .gallery-item:nth-child(4) {
+                grid-column: auto;
+            }
+
+            .booking-grid,
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .container {
+                width: 90%;
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .logo {
+                font-size: 25px;
+            }
+
+            .hero {
+                min-height: 600px;
+                background-position: 63% center;
+            }
+
+            .hero-content {
+                padding: 75px 0;
+            }
+
+            .hero h1 {
+                font-size: 3.15rem;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+            .about-image {
+                height: 370px;
+            }
+
+            .services-grid,
+            .menu-grid,
+            .testimonials-grid,
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card:last-child,
+            .menu-card:last-child {
+                grid-column: auto;
+            }
+
+            .service-card img,
+            .menu-card img {
+                height: 250px;
+            }
+
+            .gallery-grid {
+                grid-auto-rows: 180px;
+                gap: 10px;
+            }
+
+            .gallery-item:first-child {
+                grid-row: auto;
+            }
+
+            .gallery-caption {
+                font-size: 15px;
+                padding: 30px 10px 10px;
+            }
+
+            .booking-form {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full-width {
+                grid-column: auto;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-brand {
+                grid-column: auto;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container navbar">
+
+            <a href="#home" class="logo">SAVOURÉ<span>.</span></a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="#booking" class="btn nav-booking">Book a Chef</a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+
+                    <div class="section-label">Private Dining · Personal Chef Services</div>
+
+                    <h1>
+                        Fine Dining,<br>
+                        Without Leaving<br>
+                        <em>Home.</em>
+                    </h1>
+
+                    <p>
+                        From intimate candlelit dinners to unforgettable celebrations,
+                        I bring restaurant-quality cuisine, thoughtful service, and
+                        personalized dining experiences directly to your table.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#booking" class="btn">Book Your Experience</a>
+                        <a href="#services" class="btn btn-outline">Explore My Services</a>
+                    </div>
+
+                    <div class="hero-note">
+                        <span></span>
+                        CRAFTED WITH PASSION. SERVED WITH PURPOSE.
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="section" id="about">
+            <div class="container about-grid">
+
+                <div class="about-image-wrap reveal">
+                    <img
+                        class="about-image"
+                        src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=900&q=85"
+                        alt="Professional chef preparing a culinary creation"
+                        loading="lazy">
+                </div>
+
+                <div class="about-content reveal">
+
+                    <div class="section-label">A Little About Me</div>
+
+                    <h2 class="section-title">
+                        Good Food. Great Stories.
+                        Unforgettable Moments.
+                    </h2>
+
+                    <p>
+                        I believe food is one of the most beautiful ways to bring
+                        people together. Every meal has the power to create
+                        connections, celebrate milestones, and turn ordinary
+                        moments into extraordinary memories.
+                    </p>
+
+                    <p>
+                        As a private chef, I create personalized culinary
+                        experiences that reflect your taste, your occasion,
+                        and your lifestyle. Every menu is thoughtfully prepared,
+                        every detail carefully considered, and every plate
+                        served with intention.
+                    </p>
+
+                    <p>
+                        My kitchen is where creativity meets craftsmanship.
+                        My goal is simple: to give you exceptional food and
+                        the freedom to enjoy every moment around your table.
+                    </p>
+
+                    <div class="signature">With passion, Chef.</div>
+
+                    <a href="#contact" class="btn">Let's Connect</a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SERVICES SECTION -->
+        <section class="section services" id="services">
+            <div class="container">
+
+                <div class="services-header center reveal">
+                    <div class="section-label">What I Bring to Your Table</div>
+
+                    <h2 class="section-title">
+                        Your Occasion. My Kitchen.
+                    </h2>
+
+                    <p class="section-description">
+                        Whether you're celebrating someone special or simply
+                        craving something exceptional, there's a dining
+                        experience designed just for you.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+
+                    <article class="service-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=85"
+                            alt="Elegant private dining table"
+                            loading="lazy">
+
+                        <div class="service-content">
+                            <div class="service-number">01 / PRIVATE DINING</div>
+
+                            <h3>Private Dining</h3>
+
+                            <p>
+                                Restaurant-quality meals in the comfort of your
+                                home. Enjoy a personalized menu, beautiful
+                                presentation, and an intimate experience
+                                created just for you and your guests.
+                            </p>
+
+                            <a href="#booking" class="text-link">
+                                Discover Private Dining <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+
+                    <article class="service-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=85"
+                            alt="Beautifully arranged dining space for a celebration"
+                            loading="lazy">
+
+                        <div class="service-content">
+                            <div class="service-number">02 / SPECIAL EVENTS</div>
+
+                            <h3>Events &amp; Celebrations</h3>
+
+                            <p>
+                                Birthdays, anniversaries, engagement dinners,
+                                and intimate gatherings. Let me handle the
+                                culinary details while you focus on making
+                                memories with your guests.
+                            </p>
+
+                            <a href="#booking" class="text-link">
+                                Plan Your Celebration <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+
+                    <article class="service-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85"
+                            alt="Fresh ingredients and a healthy prepared meal"
+                            loading="lazy">
+
+                        <div class="service-content">
+                            <div class="service-number">03 / EVERYDAY LUXURY</div>
+
+                            <h3>Personal Meal Plans</h3>
+
+                            <p>
+                                Thoughtfully prepared meals tailored to your
+                                preferences, schedule, and dietary needs.
+                                Enjoy delicious food throughout the week
+                                without spending hours in the kitchen.
+                            </p>
+
+                            <a href="#booking" class="text-link">
+                                Explore Meal Plans <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SIGNATURE MENU -->
+        <section class="section" id="menu">
+            <div class="container">
+
+                <div class="menu-header center reveal">
+                    <div class="section-label">The Art of Flavour</div>
+
+                    <h2 class="section-title">
+                        A Menu Worth Gathering Around.
+                    </h2>
+
+                    <p class="section-description">
+                        Every dish begins with quality ingredients, a little
+                        imagination, and a deep respect for flavour.
+                        Here are a few creations to inspire your next experience.
+                    </p>
+                </div>
+
+                <div class="menu-grid">
+
+                    <article class="menu-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=85"
+                            alt="Gourmet salmon dish with vegetables"
+                            loading="lazy">
+
+                        <div class="menu-info">
+                            <span class="menu-category">Main Course</span>
+
+                            <h3>The Golden Catch</h3>
+
+                            <p>
+                                Beautifully seared salmon, buttery mash,
+                                seasonal greens, and a delicate lemon-butter
+                                sauce for a fresh, balanced finish.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="menu-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=85"
+                            alt="Carefully plated gourmet meat dish"
+                            loading="lazy">
+
+                        <div class="menu-info">
+                            <span class="menu-category">Chef's Special</span>
+
+                            <h3>The Ember Steak</h3>
+
+                            <p>
+                                Perfectly grilled steak, seasonal roasted
+                                vegetables, aromatic herbs, and a rich
+                                reduction that brings every flavour together.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="menu-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=85"
+                            alt="Elegant chocolate dessert"
+                            loading="lazy">
+
+                        <div class="menu-info">
+                            <span class="menu-category">Dessert</span>
+
+                            <h3>Midnight Indulgence</h3>
+
+                            <p>
+                                A decadent chocolate creation paired with
+                                smooth vanilla cream and a bright fruit
+                                finish for the perfect ending.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="menu-footer reveal">
+                    <a href="#booking" class="btn">Create Your Custom Menu</a>
+
+                    <p class="menu-note">
+                        Every menu is customizable to suit your preferences,
+                        occasion, and dietary requirements.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- THE EXPERIENCE -->
+        <section class="section experience" id="experience">
+            <div class="container">
+
+                <div class="center reveal">
+                    <div class="section-label">Simple, Personal, Exceptional</div>
+
+                    <h2 class="section-title">
+                        Here's How We Make It Special.
+                    </h2>
+
+                    <p class="section-description">
+                        From the first conversation to the final plate,
+                        every step is designed around you.
+                    </p>
+                </div>
+
+                <div class="steps-grid">
+
+                    <article class="step reveal">
+                        <div class="step-number">01</div>
+
+                        <h3>Tell Me Your Vision</h3>
+
+                        <p>
+                            Share your occasion, guest count, preferred date,
+                            budget, and the kind of experience you have in mind.
+                        </p>
+                    </article>
+
+                    <article class="step reveal">
+                        <div class="step-number">02</div>
+
+                        <h3>Design Your Menu</h3>
+
+                        <p>
+                            Together, we'll select dishes, discuss dietary
+                            preferences, and personalize your dining experience.
+                        </p>
+                    </article>
+
+                    <article class="step reveal">
+                        <div class="step-number">03</div>
+
+                        <h3>I Take Care of the Kitchen</h3>
+
+                        <p>
+                            From ingredient preparation to cooking and
+                            presentation, I manage the agreed culinary details.
+                        </p>
+                    </article>
+
+                    <article class="step reveal">
+                        <div class="step-number">04</div>
+
+                        <h3>Savour the Moment</h3>
+
+                        <p>
+                            Relax, connect with your guests, and enjoy a
+                            memorable meal without the usual kitchen stress.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- GALLERY -->
+        <section class="section" id="gallery">
+            <div class="container">
+
+                <div class="center reveal">
+                    <div class="section-label">A Feast for the Eyes</div>
+
+                    <h2 class="section-title">
+                        Every Plate Tells a Story.
+                    </h2>
+
+                    <p class="section-description">
+                        A glimpse into the flavours, textures, and experiences
+                        that inspire my culinary journey.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+
+                    <div class="gallery-item reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85"
+                            alt="Fresh ingredients arranged for cooking"
+                            loading="lazy">
+
+                        <div class="gallery-caption">Fresh from the Kitchen</div>
+                    </div>
+
+                    <div class="gallery-item reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=800&q=85"
+                            alt="Beautifully prepared pasta dish"
+                            loading="lazy">
+
+                        <div class="gallery-caption">Made with Intention</div>
+                    </div>
+
+                    <div class="gallery-item reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=85"
+                            alt="Delicious grilled food"
+                            loading="lazy">
+
+                        <div class="gallery-caption">Bold Flavours</div>
+                    </div>
+
+                    <div class="gallery-item reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85"
+                            alt="Fine dining table with gourmet dishes"
+                            loading="lazy">
+
+                        <div class="gallery-caption">An Experience Worth Remembering</div>
+                    </div>
+
+                    <div class="gallery-item reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=85"
+                            alt="Beautiful dessert creation"
+                            loading="lazy">
+
+                        <div class="gallery-caption">Sweet Finishes</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- TESTIMONIALS -->
+        <section class="section testimonials" id="testimonials">
+            <div class="container">
+
+                <div class="center reveal">
+                    <div class="section-label">Words from the Table</div>
+
+                    <h2 class="section-title">
+                        Good Food Leaves a Lasting Impression.
+                    </h2>
+
+                    <p class="section-description">
+                        The most meaningful compliment is knowing that
+                        the experience made someone's day special.
+                    </p>
+                </div>
+
+                <div class="testimonials-grid">
+
+                    <article class="testimonial-card reveal">
+                        <div class="stars" aria-label="5 out of 5 stars">
+                            ★★★★★
+                        </div>
+
+                        <blockquote>
+                            "Everything was beautifully prepared, and the
+                            entire evening felt effortless. We could actually
+                            enjoy our anniversary without worrying about a thing."
+                        </blockquote>
+
+                        <div class="client-name">Sample Client</div>
+                        <div class="client-event">Private Anniversary Dinner</div>
+                    </article>
+
+
+                    <article class="testimonial-card reveal">
+                        <div class="stars" aria-label="5 out of 5 stars">
+                            ★★★★★
+                        </div>
+
+                        <blockquote>
+                            "The menu was thoughtful, the presentation was
+                            stunning, and our guests couldn't stop talking
+                            about the food."
+                        </blockquote>
+
+                        <div class="client-name">Sample Client</div>
+                        <div class="client-event">Intimate Celebration</div>
+                    </article>
+
+
+                    <article class="testimonial-card reveal">
+                        <div class="stars" aria-label="5 out of 5 stars">
+                            ★★★★★
+                        </div>
+
+                        <blockquote>
+                            "Having personalized meals ready for the week
+                            has made my routine so much easier. The food
+                            is delicious, fresh, and varied."
+                        </blockquote>
+
+                        <div class="client-name">Sample Client</div>
+                        <div class="client-event">Personal Meal Service</div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CALL TO ACTION -->
+        <section class="booking-cta">
+            <div class="container reveal">
+
+                <div class="section-label">Your Table Is Waiting</div>
+
+                <h2 class="section-title">
+                    Let's Create Something Delicious.
+                </h2>
+
+                <p>
+                    Tell me about your next dinner party, celebration,
+                    or personal dining needs. Together, we'll create
+                    an experience that feels uniquely yours.
+                </p>
+
+                <a href="#booking" class="btn">Enquire About Your Date</a>
+
+            </div>
+        </section>
+
+
+        <!-- BOOKING SECTION -->
+        <section class="section booking-section" id="booking">
+            <div class="container booking-grid">
+
+                <div class="booking-copy reveal">
+
+                    <div class="section-label">Let's Talk Food</div>
+
+                    <h2 class="section-title">
+                        Your Next Memorable Meal Starts Here.
+                    </h2>
+
+                    <p>
+                        Every great experience begins with a conversation.
+                        Tell me what you're planning, and I'll get back to
+                        you to discuss your preferences, menu options,
+                        availability, and pricing.
+                    </p>
+
+                    <div class="contact-detail">
+                        <h4>Email</h4>
+                        <p>
+                            <a href="mailto:hello@yourchef.com">
+                                hello@yourchef.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="contact-detail">
+                        <h4>Service Area</h4>
+                        <p>Your city and surrounding areas</p>
+                    </div>
+
+                    <div class="contact-detail">
+                        <h4>Booking Advice</h4>
+                        <p>Advance bookings are recommended for special occasions.</p>
+                    </div>
+
+                </div>
+
+
+                <form class="booking-form reveal" id="bookingForm">
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Your full name"
+                            autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Your phone number"
+                            autocomplete="tel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occasion">Type of Occasion *</label>
+                        <select id="occasion" name="occasion" required>
+                            <option value="">Select an occasion</option>
+                            <option value="Private Dining">Private Dining</option>
+                            <option value="Birthday">Birthday Celebration</option>
+                            <option value="Anniversary">Anniversary</option>
+                            <option value="Engagement">Engagement Dinner</option>
+                            <option value="Corporate">Corporate Event</option>
+                            <option value="Meal Plans">Personal Meal Plans</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventDate">Preferred Date *</label>
+                        <input
+                            type="date"
+                            id="eventDate"
+                            name="eventDate"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Select guest count</option>
+                            <option value="1-2">1–2 Guests</option>
+                            <option value="3-5">3–5 Guests</option>
+                            <option value="6-10">6–10 Guests</option>
+                            <option value="11-20">11–20 Guests</option>
+                            <option value="21+">21+ Guests</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Event Location</label>
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="City or neighbourhood">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Estimated Budget</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select your budget</option>
+                            <option value="Under 100">Under 100 (local currency)</option>
+                            <option value="100-300">100–300 (local currency)</option>
+                            <option value="300-500">300–500 (local currency)</option>
+                            <option value="500+">500+ (local currency)</option>
+                            <option value="Discuss">Let's discuss</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="dietary">Dietary Requirements</label>
+                        <input
+                            type="text"
+                            id="dietary"
+                            name="dietary"
+                            placeholder="Allergies, preferences, or dietary needs">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="message">Tell Me About Your Vision *</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Describe your event, preferred cuisine, and any special requests..."
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn">
+                            Send Booking Enquiry
+                        </button>
+                    </div>
+
+                    <div class="form-message" id="formMessage" role="status">
+                        Thank you for your enquiry! Please connect this form
+                        to your email or booking service to submit your request.
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+
+        <!-- FAQ SECTION -->
+        <section class="section" id="faq">
+            <div class="container faq-grid">
+
+                <div class="reveal">
+                    <div class="section-label">Good to Know</div>
+
+                    <h2 class="section-title">
+                        A Few Things You Might Be Wondering.
+                    </h2>
+
+                    <p class="section-description">
+                        Have questions before booking? Here are a few details
+                        to help you plan your culinary experience with confidence.
+                    </p>
+                </div>
+
+
+                <div class="faq-list reveal">
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What does a private chef service include?
+                            <span class="faq-icon">+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Depending on your booking, the service may include
+                            menu planning, ingredient sourcing, on-site cooking,
+                            plating, and agreed kitchen cleanup. All inclusions
+                            will be confirmed before your event.
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Can I customize the menu?
+                            <span class="faq-icon">+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Absolutely. Menus can be tailored to your taste,
+                            occasion, dietary preferences, and budget.
+                            We will discuss your requirements before confirming
+                            your booking.
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            How far in advance should I book?
+                            <span class="faq-icon">+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Advance booking is recommended, particularly for
+                            weekends, holidays, and special celebrations.
+                            Your date is confirmed once availability and
+                            booking arrangements have been agreed.
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Do you cater for large events?
+                            <span class="faq-icon">+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Event capacity depends on the menu, location,
+                            kitchen facilities, and staffing requirements.
+                            Share your guest count so we can discuss a suitable
+                            arrangement.
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Can you prepare Nigerian dishes?
+                            <span class="faq-icon">+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Nigerian-inspired cuisine can be included in your
+                            experience, depending on the chef's specialties.
+                            Popular options may include jollof rice, grilled
+                            proteins, traditional soups, and modern Nigerian
+                            fusion dishes.
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            How do I confirm my booking?
+                            <span class="faq-icon">+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            Submit the booking enquiry form with your preferred
+                            date and event details. The chef can then discuss
+                            availability, pricing, payment arrangements,
+                            and the next steps for confirmation.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <a href="#home" class="logo">SAVOURÉ<span>.</span></a>
+
+                    <p>
+                        Extraordinary dining. Intimately yours.
+                        Creating meaningful moments through exceptional
+                        food, personalized menus, and thoughtful service.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                            Instagram
+                        </a>
+
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                            Facebook
+                        </a>
+
+                        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
+                            TikTok
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="footer-column">
+                    <h3>Explore</h3>
+
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About the Chef</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#menu">Signature Menu</a></li>
+                        <li><a href="#experience">The Experience</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-column">
+                    <h3>Get in Touch</h3>
+
+                    <ul>
+                        <li>
+                            <a href="mailto:hello@yourchef.com">
+                                hello@yourchef.com
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#booking">Book a Private Chef</a>
+                        </li>
+
+                        <li>
+                            <a href="#faq">Frequently Asked Questions</a>
+                        </li>
+
+                        <li>
+                            <p>Your city and surrounding areas</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; <span id="currentYear">2026</span> Savouré.
+                    All rights reserved.
+                </p>
+
+                <div class="footer-legal">
+                    <a href="#contact">Privacy Policy</a>
+                    <a href="#contact">Terms of Service</a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Mobile navigation toggle
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("active");
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+
+            menuToggle.textContent = isOpen ? "×" : "☰";
+        });
+
+        // Close mobile navigation when a link is clicked
+        document.querySelectorAll(".nav-links a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+                menuToggle.textContent = "☰";
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll(".faq-question").forEach(function (button) {
+            button.addEventListener("click", function () {
+                const item = button.closest(".faq-item");
+                const isActive = item.classList.contains("active");
+
+                document.querySelectorAll(".faq-item").forEach(function (faq) {
+                    faq.classList.remove("active");
+                    faq.querySelector(".faq-question").setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+                });
+
+                if (!isActive) {
+                    item.classList.add("active");
+                    button.setAttribute("aria-expanded", "true");
+                }
+            });
+        });
+
+        // Set the minimum booking date to today
+        const eventDate = document.getElementById("eventDate");
+
+        const today = new Date();
+        const localToday = new Date(
+            today.getTime() - today.getTimezoneOffset() * 60000
+        ).toISOString().split("T")[0];
+
+        eventDate.min = localToday;
+
+        // Update copyright year automatically
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+        // Reveal sections as they enter the viewport
+        const revealElements = document.querySelectorAll(".reveal");
+
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver(
+                function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+            revealElements.forEach(function (element) {
+                observer.observe(element);
+            });
+        } else {
+            revealElements.forEach(function (element) {
+                element.classList.add("visible");
+            });
+        }
+
+        // Booking form demonstration
+        // Connect this form to a backend or form service to receive submissions.
+        const bookingForm = document.getElementById("bookingForm");
+        const formMessage = document.getElementById("formMessage");
+
+        bookingForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            if (!bookingForm.reportValidity()) {
+                return;
+            }
+
+            formMessage.style.display = "block";
+            formMessage.textContent =
+                "Your form is ready, but it is not connected to a booking service yet. Please connect a backend or form provider to receive enquiries.";
+
+            formMessage.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
+        });
+    </script>
+
+</body>
+</html>
